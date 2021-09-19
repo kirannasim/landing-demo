@@ -1,0 +1,75 @@
+
+/* ----------------------------------------------------------------
+
+	footer.scss
+
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Footer
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Add here styles for footer. Thanks!
+-----------------------------------------------------------------*/
+
+#footer {
+	position: relative;	
+	
+	// &:before {
+	// 	content: "";
+	// 	position: absolute;
+	// 	left: 0;
+	// 	top: 0;
+	// 	height: 100%;
+	// 	width: 50%;
+	// 	background-color: $secondary;
+	// }
+
+	#footer-left,
+	#footer-right {
+		padding-top: 4.375rem;
+		padding-bottom: 5.625rem;
+		position: relative;
+	}
+
+	#footer-left {
+		@include media-breakpoint-up(lg) {
+			padding-right: 8.33333%;
+		}
+
+		&::before {
+			background-color: $secondary;
+			content: "";
+			position: absolute;			
+			right: calc(50% - 50vw);
+			top: 0;
+			height: 100%;
+			width: 100vw;
+
+			@include media-breakpoint-up(lg) {
+				right: 0;
+				width: 58.33333vw;
+			}			
+		}
+	}
+
+	#footer-right {
+		@include media-breakpoint-up(lg) {
+			padding-left: 8.33333%;
+		}
+	}
+
+	hr {
+		background-color: #5c5b59;
+		margin: 2.5rem 0;
+	}
+}
+
+#copyrights {
+	color: $dark;
+	font-size: $font-size-base;
+	font-weight: 300;	
+	z-index: 1;	
+}
